@@ -1,1 +1,7 @@
-<p>products works!</p>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let p of products">
+        {{p.name}}
+    </li>
+    <a routerLink="products">product</a>
+    <button (click)="loadProducts()" class="btn btn-primary">Sayfayı yenile</button>
+</ul>
