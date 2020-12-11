@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { products } from '../products';
 
 @Component({
   selector: 'app-products',
@@ -8,11 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
 
-  products = [
-    { name: "product1" },
-    { name: "product2" },
-    { name: "product3" }
-  ]
+  products = products; // products, products.tz üzerinden çekiliyor.
 
   constructor(
     private router: Router,
@@ -23,6 +20,6 @@ export class ProductsComponent implements OnInit {
   }
 
   loadProducts() {
-    this.router.navigate(["products"],{relativeTo: this.route});
+    this.router.navigate(["products"], { relativeTo: this.route });
   }
 }
