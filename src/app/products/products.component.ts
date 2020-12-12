@@ -9,11 +9,11 @@ import { products } from '../products';
 })
 export class ProductsComponent implements OnInit {
 
-  products = products; // products, products.tz üzerinden çekiliyor.
+  products = products; // products, products.ts üzerinden çekiliyor.
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute //ekledik çünkü "click" olayına bağlı loadProducts metotu yönlendirmesini bu sayfa üzerinden yapsın diye
+    private route: ActivatedRoute //ekledik çünkü "click" olayına bağlı loadProducts metotu yönlendirmesini bu sayfa üstünde yapsın diye
   ) { }
 
   ngOnInit(): void {
