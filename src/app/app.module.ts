@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { AdminModule } from './admin/admin.module';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -28,7 +29,8 @@ import { AdminModule } from './admin/admin.module';
     NotfoundComponent,
     ProductComponent,
     UserComponent,
-    EditProductComponent
+    EditProductComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
