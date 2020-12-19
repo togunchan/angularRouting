@@ -12,6 +12,9 @@ import { ProductComponent } from './products/product/product.component';
 import { UserComponent } from './users/user/user.component';
 import { EditProductComponent } from './products/edit-product/edit-product.component';
 import { AppRoutingModule } from './app-routing-module';
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
+import { AdminModule } from './admin/admin.module';
 
 
 
@@ -29,9 +32,10 @@ import { AppRoutingModule } from './app-routing-module';
   ],
   imports: [
     BrowserModule,
+    AdminModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
